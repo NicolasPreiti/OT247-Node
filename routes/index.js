@@ -4,20 +4,20 @@ var router = express.Router();
 const categoriesRouter = require('./categories');
 const organizationsRouter = require('./organizations');
 const authRouter = require('./auth');
-const userRouter = require('./users');
+const usersRouter = require('./users');
 const newsRouter = require('./news');
 const activitiesRouter = require('./activities');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 //Auth
-router.use('/auth', authRouter)
+router.use('/auth', authRouter);
 
 //Categories
-router.get('/login', function(req, res) {
+router.get('/login', function (req, res) {
   res.render('login');
 });
 
